@@ -847,6 +847,42 @@ Example: `GET wordpress/meta/charm-metrics`
 }
 ```
 
+#### GET *id*/meta/charm-profiles
+
+The `/meta/charm-profiles` path returns the contents of the charm profiles file
+for a charm, or a 404 not found response if no profiles are defined for the
+charm. The id must refer to a charm, not a bundle.
+
+```go
+// Profiles contains the Profiles declarations encoded in the profiles.yaml file.
+type Profiles struct {
+    Profiles map[string]interface{}
+}
+```
+
+The possible values of a Metric Type are
+
+* gauge
+* absolute
+
+Example: `GET wordpress/meta/charm-profiles`
+
+```json
+{
+    "Profiles": {
+        "lxd": {
+            "Name": "lxd profile",
+            "Description": "Description of a LXD profile",
+            "devices": {
+                "gpu": {
+                    "type": "gpu"
+                }
+            }
+        }
+    }
+}
+```
+
 #### GET *id*/meta/bundle-metadata
 
 The `meta/bundle-metadata` path returns the contents of the bundle metadata

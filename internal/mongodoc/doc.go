@@ -89,10 +89,11 @@ type Entity struct {
 
 	// TODO(rog) verify that all these types marshal to the expected
 	// JSON form.
-	CharmMeta    *charm.Meta
-	CharmMetrics *charm.Metrics
-	CharmConfig  *charm.Config
-	CharmActions *charm.Actions
+	CharmMeta     *charm.Meta
+	CharmMetrics  *charm.Metrics
+	CharmConfig   *charm.Config
+	CharmActions  *charm.Actions
+	CharmProfiles *charm.Profiles
 
 	// CharmProvidedInterfaces holds all the relation
 	// interfaces provided by the charm

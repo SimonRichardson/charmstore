@@ -886,6 +886,10 @@ func (e *entityCharm) Actions() *charm.Actions {
 	return e.CharmActions
 }
 
+func (e *entityCharm) Profiles() *charm.Profiles {
+	return e.CharmProfiles
+}
+
 func (e *entityCharm) Revision() int {
 	return e.URL.Revision
 }

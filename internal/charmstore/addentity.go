@@ -17,7 +17,7 @@ import (
 
 	jujuzip "github.com/juju/zip"
 	"gopkg.in/errgo.v1"
-	"gopkg.in/juju/charm.v6"
+	"gopkg.in/juju/charm.v7-unstable"
 	"gopkg.in/juju/charmrepo.v3/csclient/params"
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
@@ -884,6 +884,10 @@ func (e *entityCharm) Config() *charm.Config {
 
 func (e *entityCharm) Actions() *charm.Actions {
 	return e.CharmActions
+}
+
+func (e *entityCharm) LXDProfile() *charm.LXDProfile {
+	return e.CharmLXDProfile
 }
 
 func (e *entityCharm) Revision() int {

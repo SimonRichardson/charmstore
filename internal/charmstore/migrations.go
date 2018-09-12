@@ -9,7 +9,7 @@ import (
 
 	"github.com/juju/utils/parallel"
 	"gopkg.in/errgo.v1"
-	"gopkg.in/juju/charm.v6"
+	"gopkg.in/juju/charm.v7-unstable"
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 

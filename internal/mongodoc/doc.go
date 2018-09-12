@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"gopkg.in/errgo.v1"
-	"gopkg.in/juju/charm.v6"
+	"gopkg.in/juju/charm.v7-unstable"
 	"gopkg.in/juju/charmrepo.v3/csclient/params"
 	"gopkg.in/mgo.v2/bson"
 )
@@ -89,10 +89,11 @@ type Entity struct {
 
 	// TODO(rog) verify that all these types marshal to the expected
 	// JSON form.
-	CharmMeta    *charm.Meta
-	CharmMetrics *charm.Metrics
-	CharmConfig  *charm.Config
-	CharmActions *charm.Actions
+	CharmMeta       *charm.Meta
+	CharmMetrics    *charm.Metrics
+	CharmConfig     *charm.Config
+	CharmActions    *charm.Actions
+	CharmLXDProfile *charm.LXDProfile
 
 	// CharmProvidedInterfaces holds all the relation
 	// interfaces provided by the charm

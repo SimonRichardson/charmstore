@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"gopkg.in/errgo.v1"
-	"gopkg.in/juju/charm.v6"
+	"gopkg.in/juju/charm.v7-unstable"
 )
 
 // Resource holds the in-database representation of a charm resource at a

@@ -11,8 +11,8 @@ import (
 	"strings"
 
 	"gopkg.in/errgo.v1"
-	"gopkg.in/juju/charm.v6"
-	"gopkg.in/juju/charm.v6/resource"
+	"gopkg.in/juju/charm.v7-unstable"
+	"gopkg.in/juju/charm.v7-unstable/resource"
 	"gopkg.in/juju/charmrepo.v3/testing"
 	"gopkg.in/yaml.v2"
 
